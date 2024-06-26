@@ -15,9 +15,7 @@ const Car: FC<IProps> = ({nameOfClassImg, nameOfClassTitle, nameOfClassBut,
     return (
         <div>
 
-            <button
-                className={nameOfClassBut}>
-
+            <button className={nameOfClassBut}>
                 {children}
             </button>
             <h2 className={nameOfClassTitle}>{model}</h2>
