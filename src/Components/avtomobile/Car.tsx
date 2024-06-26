@@ -5,7 +5,6 @@ interface IProps {
     nameOfClassImg: string;
     nameOfClassTitle: string;
     nameOfClassBut: string;
-
     model: string;
     image: string;
     children: React.ReactNode
