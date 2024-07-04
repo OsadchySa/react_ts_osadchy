@@ -1,20 +1,27 @@
 import React, {Component} from 'react';
 import {getAllUsers} from "../services/api.service";
+import {IUser} from "../models/IUser";
 
+type StateType = {
+    users: IUser[]
+}
 
-class UsersComponent extends Component {
+class UsersComponent extends Component <{}, StateType> {
 
-    state={
-        users: []
+    state:StateType = {
+        users:[]
     }
     componentDidMount() {
-        getAllUsers().then(response=>{this.setState({...this.state, users:response.users})})
+        getAllUsers().then(response=> this.setState({users:response.users}))
     }
+
 
     render() {
         return (
             <div>
-                {this.state.users}
+                {
+                    this.state.users.map(user=> (<li>{user.id}: {user.firstName} {user.lastName}</li>))
+                }
             </div>
         );
     }

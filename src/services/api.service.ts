@@ -1,4 +1,5 @@
 import axios from "axios";
+import {IUser} from "../models/IUser";
 
 const baseUrl = 'https://dummyjson.com/users'
 
