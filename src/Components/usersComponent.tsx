@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {getAllUsers} from "../services/api.service";
 import {IUser} from "../models/IUser";
+import UserComponent from "./userComponent";
 
 type StateType = {
     users: IUser[]
@@ -20,7 +21,7 @@ class UsersComponent extends Component <{}, StateType> {
         return (
             <div>
                 {
-                    this.state.users.map(user=> (<li>{user.id}: {user.firstName} {user.lastName}</li>))
+                    this.state.users.map(user=> (<UserComponent key={user.id} user={user}/>))
                 }
             </div>
         );

@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
-import {getPostsOfUserById} from "../services/api.service";
-class UserComponent extends Component {
+import {IUser} from "../models/IUser";
+
+type PropType = {
+    user:IUser
+}
+class UserComponent extends Component <PropType>{
 
     componentDidMount() {
         console.log('mount')
@@ -9,7 +13,7 @@ class UserComponent extends Component {
     render() {
         return (
             <div>
-                
+                {this.props.user.id}: {this.props.user.firstName} {this.props.user.lastName}
             </div>
         );
     }
