@@ -6,9 +6,8 @@ import {getPostsOfUserById} from "../services/api.service";
 type PropType = {
     user:IUser
 }
-
 class UserComponent extends Component <PropType>{
-    state = {
+    state:{posts:any[]} = {
         posts:[]
     }
     componentDidMount() {
@@ -19,7 +18,7 @@ class UserComponent extends Component <PropType>{
         return (
             <div>
                 {this.props.user.id}: {this.props.user.firstName} {this.props.user.lastName}
-                <button onClick={()=>{this.state.posts.map(value =>console.log(value))}}>GET POSTS</button>
+                <button onClick={()=>{this.state.posts.map(value =>console.log(value.body))}}>GET POSTS</button>
             </div>
 
         );
