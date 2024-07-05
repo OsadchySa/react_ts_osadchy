@@ -1,10 +1,14 @@
 import React from 'react';
 
 import './App.css';
+import FormComponent from "./Components/FormComponent";
+
 
 const App=()=>{
   return (
-    <div></div>
+    <div>
+      <FormComponent/>
+    </div>
   );
 }
 
