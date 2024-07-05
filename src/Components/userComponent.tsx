@@ -6,10 +6,6 @@ type PropType = {
 }
 class UserComponent extends Component <PropType>{
 
-    componentDidMount() {
-        console.log('mount')
-    }
-
     render() {
         return (
             <div>
