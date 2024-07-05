@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import {IUser} from "../models/IUser";
 import {getPostsOfUserById} from "../services/api.service";
 
+
 type PropType = {
     user:IUser
 }
+
 class UserComponent extends Component <PropType>{
     state = {
         posts:[]
@@ -17,7 +19,7 @@ class UserComponent extends Component <PropType>{
         return (
             <div>
                 {this.props.user.id}: {this.props.user.firstName} {this.props.user.lastName}
-                <button onClick={()=>{console.log(this.state.posts)}}>GET POSTS</button>
+                <button onClick={()=>{this.state.posts.map(value =>console.log(value))}}>GET POSTS</button>
             </div>
 
         );
