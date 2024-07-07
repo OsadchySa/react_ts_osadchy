@@ -9,9 +9,10 @@ import userValidator from "../validators/userValidator";
 Якщо ви не пам'ятаєте як відправляти данні на jsonplaceholder подивіться його документації*/
 
 type IFormType = {
-    username:string,
-    password:string,
-    age:number
+    userid:number
+    title:string,
+    body:string,
+
 }
 const FormComponent = () => {
 
@@ -40,11 +41,12 @@ const FormComponent = () => {
 
     return (
         <div>
-            {errors.age && <div>{errors.age.message}</div>}
+            {errors.userid && <div>{errors.userid.message}</div>}
             <form onSubmit={handleSubmit(formSubmitHandler)}>
-                <input type='text' {...register('username')}/>
-                <input type='text' {...register('password')}/>
-                <input type='number' {...register('age')}/>
+                <input type='number' {...register('userid')}/>
+                <input type='text' {...register('title')}/>
+                <input type='text' {...register('body')}/>
+
                 <button disabled={!isValid}>SEND</button>
             </form>
         </div>
