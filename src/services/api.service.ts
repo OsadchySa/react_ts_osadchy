@@ -8,7 +8,7 @@ const baseUrl = 'https://jsonplaceholder.typicode.com/posts'
      }
  })
 
-const sendPostOfUser = async (data:object) => {
+const sendPostOfUser = (data:object) => {
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
