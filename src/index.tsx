@@ -5,14 +5,17 @@ import MainLayout from "./layouts/MainLayout";
 import UsersPage from "./pages/UsersPage";
 import PostsPage from "./pages/PostsPage";
 import CommentsPage from "./pages/CommentsPage";
-
+import MyErrorLayout from "./layouts/MyErrorLayout";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
 let myRouter = createBrowserRouter([
-    {path:'/', element: <MainLayout/>, children: [
+    {path:'/',
+        element: <MainLayout/>,
+        errorElement:<MyErrorLayout/>,
+        children: [
             {path: 'users', element: <UsersPage/>},
             {path: 'posts', element: <PostsPage/>},
             {path: 'comments', element: <CommentsPage/>}
