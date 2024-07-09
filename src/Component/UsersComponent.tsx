@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {getAllUsers} from "../services/api.service";
+import React from 'react';
+
 
 const UsersComponent = () => {
 
