@@ -5,9 +5,9 @@ import UsersComponent from "../Component/UsersComponent";
 
 const UsersPage = () => {
     const [users, setUsers] = useState<IUser[]>([])
-    fetch('https://dummyjson.com/users')
-        .then((value) => value.json())
-        .then(value => {setUsers(value)})
+    getAllUsers()
+        .then(value => {setUsers(value.users)})
+
 
     return (
         <div>

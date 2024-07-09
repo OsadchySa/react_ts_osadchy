@@ -12,7 +12,7 @@ const UsersComponent: FC<IProps> = ({users}) => {
         <div>
             <ul>
                 {
-                    users.map(user=> (<li>{user.firstName}</li>))
+                    users.map(user=> (<li>{user.id}: {user.firstName} {user.lastName}</li>))
                 }
             </ul>
         </div>
