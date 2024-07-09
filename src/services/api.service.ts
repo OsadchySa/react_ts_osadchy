@@ -5,9 +5,9 @@ const getAllUsers = () => {
         .then((value) => value.json())
 }
 
-/*const getPostsOfUserById = (id: number) => {
+const getPostsOfUserById = (id: string | undefined) => {
     return fetch(baseUrl+'/'+id+'/posts')
         .then((value) => value.json())
 }
-*/
-export {getAllUsers}
+
+export {getAllUsers, getPostsOfUserById}
