@@ -14,6 +14,7 @@ const UsersPage = () => {
     return (
         <div>
             <UsersComponent users={users}/>
+            USERS PAGE
         </div>
     );
 };

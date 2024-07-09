@@ -5,7 +5,7 @@ import {getPostsOfUserById} from "../services/api.service";
 const UserPage = () => {
     let {id} = useParams()
     const [posts, setPosts] = useState()
-    getPostsOfUserById(id).then(value => console.log(value))
+    getPostsOfUserById(id).then(value => console.log(value.posts))
     return (
         <div>
             USER PAGE{id}

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
+import CommentsComponent from "../Component/CommentsComponent";
+import {getComments} from "../services/api.service";
 
 const CommentsPage = () => {
+    const [comments, setComments] = useState([])
+    getComments()
+        .then(value => {
+            setComments(value.comments)
+        })
+
     return (
         <div>
-            <CommentsPage/>
+            <CommentsComponent comments={comments}/>
+            COMMENTS PAGE
         </div>
     );
 };
