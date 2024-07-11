@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSearchParams} from "react-router-dom";
 import PrevButtonComponent from "../button-components/PrevButtonComponent";
 import NextButtonComponent from "../button-components/NextButtonComponent";
 
