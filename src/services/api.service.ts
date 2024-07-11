@@ -1,19 +1,24 @@
 const baseUrl = 'https://dummyjson.com'
 
-const getAllUsers = () => {
-    return fetch(baseUrl+'/users?skip=60')
+const getAllUsers = (skip:number) => {
+    return fetch(baseUrl+'/users?skip='+skip)
         .then((value) => value.json())
 }
 
-const getPosts = () => {
-    return fetch(baseUrl+'/posts?skip=60')
+const getPosts = (skip:number) => {
+    return fetch(baseUrl+'/posts?skip='+skip)
         .then((value) => value.json())
 }
 
-const getComments = () => {
-    return fetch(baseUrl+'/comments?skip=60')
+const getComments = (skip:number) => {
+    return fetch(baseUrl+'/comments?skip='+skip)
         .then((value) => value.json())
 }
+
+
+
+
+
 
 
 const getPostsOfUserById = (id: string | undefined) => {

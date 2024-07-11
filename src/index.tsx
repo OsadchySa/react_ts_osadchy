@@ -6,7 +6,7 @@ import UsersPage from "./pages/UsersPage";
 import PostsPage from "./pages/PostsPage";
 import CommentsPage from "./pages/CommentsPage";
 import MyErrorLayout from "./layouts/MyErrorLayout";
-import UserPage from "./pages/UserPage";
+
 
 
 
