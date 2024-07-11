@@ -1,17 +1,17 @@
 const baseUrl = 'https://dummyjson.com'
 
 const getAllUsers = () => {
-    return fetch(baseUrl+'/users')
+    return fetch(baseUrl+'/users?skip=60')
         .then((value) => value.json())
 }
 
 const getPosts = () => {
-    return fetch(baseUrl+'/posts')
+    return fetch(baseUrl+'/posts?skip=60')
         .then((value) => value.json())
 }
 
 const getComments = () => {
-    return fetch(baseUrl+'/comments')
+    return fetch(baseUrl+'/comments?skip=60')
         .then((value) => value.json())
 }
 

@@ -20,7 +20,6 @@ let myRouter = createBrowserRouter([
         errorElement:<MyErrorLayout/>,
         children: [
             {path: 'users', element: <UsersPage/>},
-            {path: 'users/:id', element: <UserPage/>},
             {path: 'posts', element: <PostsPage/>},
             {path: 'comments', element: <CommentsPage/>}
         ]},
