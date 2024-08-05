@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {postActions, useAppDispatch, useAppSelector, userActions} from "./redux/store";
+import {useAppDispatch, useAppSelector} from "./redux/store";
+import {userActions} from "./slices/userSlice";
+import {postActions} from "./slices/postSlice";
 
 const App=()=>{
   let {userSlice:{users, isLoaded}} = useAppSelector(state => state);
